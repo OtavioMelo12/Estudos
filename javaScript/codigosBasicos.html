@@ -1,0 +1,90 @@
+<html>
+
+	<head>
+		<title>Cursos JavaScript</title>
+	</head>
+
+	<body>
+		<script>
+			// Variáveis dinâmicas
+			var nome = 'Otavio';
+			var sobrenome = 'Melo';
+			var idade = 20;
+			var altura = 1.75;
+			var humano = true;
+
+			// Objeto
+			var pessoa = {
+				nome: nome,
+				sobrenome: sobrenome,
+				idade: idade,
+				altura: altura,
+				humano: humano,
+			};
+
+			// Funções
+			function soma(n1, n2) {
+				resultado = n1+n2;
+
+				return resultado;
+			};
+			resultado = soma(1+2)
+
+			// Condições if/else
+			if(1 === '1') {
+				//vai retornar false
+			} else if(1 == '1'){
+				//vai retornar true
+			} else {
+				//...
+			}
+
+			// Condições switch/case
+			switch (key) {
+				case value: // se a key for igual ao value
+					//retorna true ;
+				default:
+					//retorna false ;
+			}
+
+			// Operadores Lógicos [and(&&), or(||), not(!==)]
+			var idade = 20, sexo = 'M';
+			if (idade >= 20 && sexo === 'M') {
+				// ...
+			}
+			if (idade === 20 || sexo === 'M') {
+				// ...
+			}
+			if (idade !== 20 || sexo != 'M') {
+				// ...
+			}
+
+			var sexo = 'masculino';
+			var masculino = sexo === 'masculino'; //  boleano que retorna true ou false para a variavel masculino
+
+			// Condição Ternária
+			var retorno = (sexo === 'M') ? 'Masculino' : 'Outro';  // if/else reduzido.
+
+			// Estruturas de Repetição (for, while)
+			for (var i=0; i<=100; i++) {
+				// i vai de 0 à 100
+			}
+
+			var j = 0;
+			while (j <= 100) {
+				j++;
+				// j vai de 0 à 100
+			}
+
+			// Intervalo e Timeout
+			function exibeAlgo() {
+				console.log('Hello World')
+			};
+
+			setInterval(exibeAlgo, 1000); // vai rodar a funçao exibeAlgo() a cada 1 segundo.
+
+			setTimeout(exibeAlgo, 5000); // vai rodar a funçao uma vez, mas com um 'delay' de 5 segundos.
+		</script>
+	</body>
+
+</html>
