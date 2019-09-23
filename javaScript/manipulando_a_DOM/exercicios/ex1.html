@@ -1,0 +1,33 @@
+<html">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercicio 1</title>
+    </head>
+
+    <body>
+        <div class="box">
+            <button class="botao">Adicionar Quadrado</button>
+        </div>
+    </body>
+
+    <script>
+        // Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+        //vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+        //aparecer na tela.
+
+        var btnElement = document.querySelector('div .botao');
+
+        btnElement.onclick = function() {
+            var boxElement = document.createElement('div');
+            boxElement.setAttribute('title', 'quadrado');
+
+            boxElement.style.width = 100;
+            boxElement.style.height = 100;
+            boxElement.style.backgroundColor = '#f00';
+
+            var containerElement = document.querySelector('.box');
+            containerElement.appendChild(boxElement);
+        }
+        
+    </script>
+</html>

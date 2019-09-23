@@ -1,0 +1,51 @@
+<html">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercicio 2</title>
+    </head>
+
+    <body>
+        <div class="box">
+            <button class="botao">Adicionar Quadrado</button>
+            <text>Passe o mouse sobre os quadrados para alterar suas cores</text>
+        </div>
+    </body>
+
+    <script>
+        // Utilizando o resultado do primeiro desafio, 
+        //toda vez que o usuário passar o mouse por cima de
+        //algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+
+        var btnElement = document.querySelector('div .botao');
+
+        btnElement.onclick = function() {
+            var boxElement = document.createElement('div');
+            boxElement.setAttribute('title', 'quadrado');
+
+            boxElement.style.width = 100;
+            boxElement.style.height = 100;
+            boxElement.style.backgroundColor = '#f00';
+
+            var containerElement = document.querySelector('.box');
+            containerElement.appendChild(boxElement);
+
+            boxElement.onmouseover = function() {
+                var newColor = getRandomColor();
+                boxElement.style.backgroundColor = newColor;
+            }
+        }
+
+        
+        
+    </script>
+</html>
