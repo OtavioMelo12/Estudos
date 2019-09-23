@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Elementos</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome" id="nome">
+            <button class="botao">Adicionar</button>
+        </div>
+
+        <script>
+            // retora o elemento com o id especificado
+            var inputElement1 = document.getElementById('nome');
+            // retorna uma lista de elementos com o tipo especificado
+            var inputElement2 = document.getElementsByTagName('input');
+            // retorna um unico elemento passando o caminho e especificando
+            var inputElement3 = document.querySelector('div#app input[name=nome]');
+
+            //busca o primeiro button com a classe botao
+            var btnElement = document.querySelector('button.botao');
+            var inputElement = document.querySelector('input[name=nome]');
+
+            btnElement.onclick = function() {
+                var text = inputElement.value;
+
+                alert("O texto digitado foi: "+text);
+            }
+            console.log(inputElement3);
+        </script>
+        
+    </body>
+</html>
