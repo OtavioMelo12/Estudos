@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Exercicio 2</title>
+	</head>
+
+	<body>
+		<script>
+            // Escreva uma função que verifique se o vetor de skills passado possui 
+            // a skill desejada e retorna um booleano true/false caso exista ou não.
+            
+            var skills = ['Javascript', 'ReactJS', 'ReactNative'];
+            var skill = 'ReactJS';
+
+            function temHabilidade(skills, skill) {
+                var possuiHabilidade;
+                for (var i = 0; i < skills.length; i++) {
+                    if(skills[i] === skill) {
+                        possuiHabilidade = true;
+                        return possuiHabilidade;
+                    }
+                }
+                return false;
+            };
+
+            retorno = temHabilidade(skills, skill);
+            console.log(retorno);
+		</script>
+	</body>
+</html>
