@@ -1,5 +1,5 @@
 
-// ------------------------------------------------CLASSES ---------------------------------------------------------------------------
+// ----------------------------CLASSES ---------------------------------------------------------------------------
 class List {
     // metodo construtor que é executado na construçao da classe
     constructor() {
@@ -34,7 +34,7 @@ document.getElementById('novotodo').onclick = function() {
 
 MinhaLista.mostraUsuario();
 
-// -------------------------------------OPERACOES EM ARRAYS --------------------------------------------------------------------------
+// -----------------OPERACOES EM ARRAYS --------------------------------------------------------------------------
 
 const array = [1,2,5,6,7,8,4];
 
@@ -64,7 +64,7 @@ const find = array.find(function(item) {
 })
 console.log(find);
 
-// ---------------------------------------ARROW FUNCTIONS ---------------------------------------------------------------------------
+// ------------ARROW FUNCTIONS ---------------------------------------------------------------------------
 
 // memsma funçao anterior, em arrow function
 const newArray1 = array.map((item, index) => {
@@ -93,7 +93,7 @@ console.log(teste2());
 const teste3 = () => ({nome: 'Otavio', sobrenome: 'Melo'});
 console.log(teste3());
 
-// ------------------------ DESESTRUTURACAO DE OBJETOS --------------------------------------------------------------------------------------------------------
+// --------- DESESTRUTURACAO DE OBJETOS --------------------------------------------------------------------------------------------------------
 
 const usuario = {
     nome: 'Otavio',
@@ -114,3 +114,35 @@ function teste({ nome, idade, endereco: { estado } }) {
 }
 teste(usuario);
 
+//------------ REST -------------------------------------------------------------------------------------------------------------------------
+
+const pessoa = {
+    nome: "Otávio",
+    sobrenome: "Melo",
+    pais: "Brasil"
+};
+
+// pega a informaçao nome e armazena na variavel 'nome', e o que sobrar fica na variavel 'resto'
+const { nome, ...resto } = usuario;
+console.log(nome);
+console.log(resto);
+
+const arr = [1,2,3,4,5,6];
+// a=1, b=2, c=[3,4,5,6]
+const [ a, b, ...c ] = arr;
+console.log(a, b);
+console.log(c);
+
+// funçao que pega e soma todos os parametros
+function soma(...params) {
+    return params.reduce((total, next) => total+next);
+}
+console.log(soma(1, 2, 3, 4, 5));
+
+//------------SPREAD-------------------------------------------------------------------------------------------------
+
+const arr1 = [1,2,3];
+const arr2 = [4,5,6];
+// concatena todos os valores de 'arr1' com 'arr2'
+const arr3 = [...arr1, ...arr2];
+console.log(arr3);
